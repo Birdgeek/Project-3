@@ -1,0 +1,2067 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0053)http://www.sengpielaudio.com/calculator-notenames.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Note names of musical notes keyboard piano frequencies = octave piano keys number tone tones 88 notes frequency names of all keys on a grand piano standard concert pitch tuning German English system MIDI 88 - sengpielaudio Sengpiel Berlin</title>
+<link rel="shortcut icon" href="http://www.sengpielaudio.com/favicon.ico">
+
+<meta name="content-language" content="en">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="description" content="Note names concert standard pitch tuning keyboard music piano key numbers frequencies octave musical grand piano keys tone 88 notes frequency names of all keys on a piano naming note names German English MIDI - Eberhard Sengpiel sengpielaudio">
+<meta name="keywords" content="midi,notes,note,frequencies,mikrofonaufnahmetechnik,tonstudiotechnik,tonstudio,aufnahmetechnik,tontechnik,fragen,Eberhard Sengpiel,sengpielaudio,surround,sound,toningenieur,tonmeister,akustik,antworten,audio,audioaufnahmen,audiolinks,audiosystemtechnik,audiotechnik,bezugsschalldruck,Blauert,Blumlein,dB,deccadreieck,dekorrelation,diffusfeld,druckgradient,druckstau,formanten,mikrofone,mikrofonforum,forum,freifeld,haaseffekt,hallradius,hauptmikrofone,klang,klangfarbe,lateralisation,laufzeitdifferenzen,laufzeitstereofonie,laufzeitunterschiede,lokalisation,mikrofontechnik,mikrofonanordnung,mikrofonaufstellungen,musikaufnahmen,nachhall,nachhallzeit,panpot,pegel,pegeldifferenzen,psychoakustik,raummikrofone,richtcharakteristiken,schalldruck,stereo,stereoaufnahmen,stereoaufnahmetechnik,stereomikrofone,studiotechniken,surround-sound,tonaufnahmen,tonaufnahmetechnik,vorlesungen">
+<meta name="abstract" content="Eberhard Sengpiel: Berechnung zur Mikrofonaufnahmetechnik, Psycho- und Elektroakustik und zur Aufnahmepraxis in der Tonstudiotechnik">
+<meta name="author" content="Eberhard Sengpiel">
+<meta name="publisher" content="sengpielaudio">
+<meta name="copyright" content="© ebs">
+<meta name="DateModified" content="2014-08-01">
+<meta name="robots" content="index,follow">
+
+<!-- Frequency to Note Calculator -->
+<script language="JavaScript">
+// There are still some faults in the original program.
+// See: http://www.birdsoft.demon.co.uk/music/notecalc.htm
+// This program here is error free.
+<!-- start
+function round(value, places)
+{
+var round_offset = 0.5 / Math.pow(10, places);
+var tot_str = "" + (value + round_offset);
+var point_idx = tot_str.indexOf(".");
+var result_str = "";
+var suffix_str = "";
+var nonzero_suffix = 0;
+var y = 0;
+var x = 0;
+var c = "";
+var exponent = "";
+while (x <= (point_idx + places))
+{
+if (x == point_idx && y == 0)
+{
+y = 1;
+}
+else
+{
+c = tot_str.charAt(x);
+if (y == 0)
+{
+result_str += c
+}
+else
+{
+suffix_str += c;
+if (nonzero_suffix == 0 && c != "0" && c != ".")
+{
+nonzero_suffix = 1;
+}
+}
+x++;
+}
+}
+c = tot_str.charAt(x);
+while (x < tot_str.length)
+{
+// document.write( tot_str );
+if ( c == "e" || c == "E" || exponent != "" )
+{
+exponent += c;
+}
+x++;
+c = tot_str.charAt(x);
+}
+if (nonzero_suffix == 1)
+{
+result_str += suffix_str;
+}
+return result_str + exponent;
+}
+function lognote(freq)
+{
+var oct = (Math.log (freq) - Math.log (261.626))
+/ Math.log (2) + 4.0;
+return oct;
+}
+function freq_to_note(form)
+{
+var freq = form.freq.value;
+var lnote = lognote(freq);
+var oct = Math.floor(lnote);
+var cents = 1200 * (lnote - oct);
+var note_table = "C C#D D#E F F#G G#A A#B";
+var offset = 50.0;
+var x = 2;
+if (cents < 50)
+{
+note = "C ";
+}
+else if (cents >= 1150)
+{
+note = "C ";
+cents -= 1200;
+oct++;
+}
+else
+{
+for (j = 1 ; j <= 11 ; j++)
+{
+if (cents >= offset && cents < (offset + 100))
+{
+note = note_table.charAt(x) + note_table.charAt(x + 1);
+cents -= (j * 100);
+break;
+}
+offset += 100;
+x += 2;
+}
+}
+form.cents.value = round (cents, 2);
+form.note.value = note + (oct + "");
+return;
+}
+function clear_result(form)
+{
+form.cents.value = "";
+form.note.value = "";
+return;
+}
+// end Frequency to Note Calculator -->
+</script>
+</head>
+
+<body background="./Frequenies of Music Notes_files/background57.gif" bgcolor="#ffffff" text="#0000ff" link="#0000ff" vlink="#990066" alink="#990066">
+<center><img src="./Frequenies of Music Notes_files/Tontechnik-Rechner.gif" alt="Keyboard music grand piano frequencies note names tone chord piano keys musical 88 notes frequency names of all keys on a piano naming notes German English system MIDI - sengpielaudio" width="600" height="60" border="0"></center>
+<font size="1">&nbsp;</font><br>
+<table width="194" align="center">
+<tbody><tr>
+<td width="136" align="right"><a href="http://www.sengpielaudio.com/Rechner-notennamen.htm" target="_self"><font color="blue" face="Arial"><b>Deutsche&nbsp;Version</b></font></a></td>
+<td><img src="./Frequenies of Music Notes_files/FlaggeUK-SW.gif" alt="UK-flag s/w - sengpielaudio" width="21" height="13" border="0"></td>
+<td><a href="http://www.sengpielaudio.com/Rechner-notennamen.htm" target="_self"><img src="./Frequenies of Music Notes_files/FlaggeDe.gif" alt="D-flag - sengpielaudio" width="21" height="13" border="0"></a></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<div align="center"><font face="Arial" size="6"><b>&#9679; </b></font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+keyboard&amp;filter=0" target="_blank"><font face="Arial" size="6" color="blue"><b>Keyboard</b></font></a><font face="Arial" size="6"><b> and </b></font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+frequencies&amp;filter=0" target="_blank"><font face="Arial" size="6" color="blue"><b>frequencies</b></font></a><font face="Arial" size="6"><b> &#9679;</b></font><br>
+<font face="Arial" size="5"><b>&#9679; </b></font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+notes&amp;filter=0" target="_blank"><font face="Arial" size="5" color="blue"><b>Naming of musical notes</b></font></a><font face="Arial" size="5"><b> and </b></font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+piano+keys&amp;filter=0" target="_blank"><font face="Arial" size="5" color="blue"><b>piano keys</b></font></a><font face="Arial" size="5"><b> &#9679;</b></font><br>
+<font size="1">&nbsp;</font><br>
+<font size="4" face="Arial"><b>Music notation systems &#8722; Music frequencies of </b></font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+tuning&amp;filter=0" target="_blank"><font face="Arial" size="4" color="blue"><b>equal temperament tuning</b></font></a><br>
+<font size="1">&nbsp;</font><br>
+<a href="http://www.sengpielaudio.com/ChordNameFinder.htm" target="_blank"><font size="5" face="Arial" color="blue"><b>Chord name finder by note entry</b></font></a></div>
+<font size="1">&nbsp;</font><br>
+<center><font face="Arial" size="4">The English and American scientific system versus the German system</font><br>
+<font face="Arial" size="4">Scientific Pitch Notation (<b>SPN</b>), also known as American Standard Pitch Notation</font>
+</center>
+<font size="1">&nbsp;</font><br>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">The </font><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+pitch+tuning&amp;filter=0" target="_blank"><font face="Arial" color="blue">standard pitch tuning</font></a><font face="Arial"> is <b>A4</b> (A above middle C) &#8722; in German-speaking countries it is called <b>a’</b>.<br>
+The notes have different names. The German system is used also in many other countries, as there are<br>
+e.g. Poland, Czech Republic, and Russia.<br>
+A "normal" piano has the following dimensions: width 145 to 150 cm, height 115 to 125 cm, depth 52 to 60 cm.<br>
+A typical "keyboard" has 61 keys today. The sound frequencies of the 88 keys on the piano are:</font></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td align="center"><font face="Arial">Piano<br>
+&nbsp;&nbsp;&nbsp;key number&nbsp;&nbsp;&nbsp;</font></td>
+<td align="center"><font face="Arial">English<br>
+notation</font></td>
+<td align="center"><font face="Arial">German<br>
+notation </font></td>
+<td align="center"><font face="Arial">&nbsp;Frequency&nbsp;<br>
+Hz</font></td>
+</tr>
+<tr>
+<td><font face="Arial">88</font></td>
+<td><font face="Arial">C8 - Last tone </font></td>
+<td><font face="Arial">c<b>’’’’’</b> - Highest</font></td>
+<td><font face="Arial">&nbsp;4186.01</font></td>
+</tr>
+<tr>
+<td><font face="Arial">87</font></td>
+<td><font face="Arial">B7</font></td>
+<td><font face="Arial">h<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;3951.07</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">86</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">7/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">7</font></td>
+<td><font face="Arial">ais<b>’’’’</b>/b<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;3729.31</font></td>
+</tr>
+<tr>
+<td><font face="Arial">85</font></td>
+<td><font face="Arial">A7</font></td>
+<td><font face="Arial">a<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;3520.00</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">84</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">7/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">7</font></td>
+<td><font face="Arial">gis<b>’’’’</b>/as<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;3322.44</font></td>
+</tr>
+<tr>
+<td><font face="Arial">83</font></td>
+<td><font face="Arial">G7</font></td>
+<td><font face="Arial">g<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;3135.96</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">82</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">7/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">7</font></td>
+<td><font face="Arial">fis<b>’’’’</b>/ges<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2959.96</font></td>
+</tr>
+<tr>
+<td><font face="Arial">81</font></td>
+<td><font face="Arial">F7</font></td>
+<td><font face="Arial">f<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2793.83</font></td>
+</tr>
+<tr>
+<td><font face="Arial">80</font></td>
+<td><font face="Arial">E7</font></td>
+<td><font face="Arial">e<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2637.02</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">79</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">7/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">7</font></td>
+<td><font face="Arial">dis<b>’’’’</b>/es<b>''''</b></font></td>
+<td><font face="Arial">&nbsp;2489.02</font></td>
+</tr>
+<tr>
+<td><font face="Arial">78</font></td>
+<td><font face="Arial">D7</font></td>
+<td><font face="Arial">d<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2349.32</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">77</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">7/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">7</font></td>
+<td><font face="Arial">cis<b>’’’’</b>/des<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2217.46</font></td>
+</tr>
+<tr>
+<td><font face="Arial">76</font></td>
+<td><font face="Arial">C7</font></td>
+<td><font face="Arial">c<b>’’’’</b></font></td>
+<td><font face="Arial">&nbsp;2093.00</font></td>
+</tr>
+<tr>
+<td><font face="Arial">75</font></td>
+<td><font face="Arial">B6</font></td>
+<td><font face="Arial">h<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1975.53</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">74</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">6/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">6</font></td>
+<td><font face="Arial">ais<b>’’’</b>/b<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1864.66</font></td>
+</tr>
+<tr>
+<td><font face="Arial">73</font></td>
+<td><font face="Arial">A6</font></td>
+<td><font face="Arial">a<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1760.00</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">72</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">6/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">6</font></td>
+<td><font face="Arial">gis<b>’’’</b>/as<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1661.22</font></td>
+</tr>
+<tr>
+<td><font face="Arial">71</font></td>
+<td><font face="Arial">G6</font></td>
+<td><font face="Arial">g<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1567.98</font></td>
+</tr>
+<tr>
+<td bgcolor="black">70</td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">6/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">6</font></td>
+<td><font face="Arial">fis<b>’’’</b>/ges<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1479.98</font></td>
+</tr>
+<tr>
+<td><font face="Arial">69</font></td>
+<td><font face="Arial">F6</font></td>
+<td><font face="Arial">f<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1396.91</font></td>
+</tr>
+<tr>
+<td><font face="Arial">68</font></td>
+<td><font face="Arial">E6</font></td>
+<td><font face="Arial">e<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1318.51</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">67</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">6/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">6</font></td>
+<td><font face="Arial">dis<b>’’’</b>/es<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1244.51</font></td>
+</tr>
+<tr>
+<td><font face="Arial">66</font></td>
+<td><font face="Arial">D6</font></td>
+<td><font face="Arial">d<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1174.66</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">65</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">6/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">6</font></td>
+<td><font face="Arial">cis<b>’’’</b>/des<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1108.73</font></td>
+</tr>
+<tr>
+<td><font face="Arial">64</font></td>
+<td><font face="Arial">C6 (high C) </font></td>
+<td><font face="Arial">c<b>’’’</b></font></td>
+<td><font face="Arial">&nbsp;1046.50</font></td>
+</tr>
+<tr>
+<td><font face="Arial">63</font></td>
+<td><font face="Arial">B5</font></td>
+<td><font face="Arial">h<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;987.767</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">62</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">5/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">5</font></td>
+<td><font face="Arial">ais<b>’’</b>/b<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;932.328</font></td>
+</tr>
+<tr>
+<td><font face="Arial">61</font></td>
+<td><font face="Arial">A5</font></td>
+<td><font face="Arial">a<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;880.000</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">60</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">5/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">5</font></td>
+<td><font face="Arial">gis<b>’’</b>/as<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;830.609</font></td>
+</tr>
+<tr>
+<td><font face="Arial">59</font></td>
+<td><font face="Arial">G5</font></td>
+<td><font face="Arial">g<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;783.991</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">58</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">5/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">5</font></td>
+<td><font face="Arial">fis<b>’’</b>/ges<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;739.989</font></td>
+</tr>
+<tr>
+<td><font face="Arial">57</font></td>
+<td><font face="Arial">F5</font></td>
+<td><font face="Arial">f<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;698.456</font></td>
+</tr>
+<tr>
+<td><font face="Arial">56</font></td>
+<td><font face="Arial">E5</font></td>
+<td><font face="Arial">e<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;659.255</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">55</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">5/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">5</font></td>
+<td><font face="Arial">dis<b>’’</b>/es<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;622.254</font></td>
+</tr>
+<tr>
+<td><font face="Arial">54</font></td>
+<td><font face="Arial">D5</font></td>
+<td><font face="Arial">d<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;587.330</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">53</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">5/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">5</font></td>
+<td><font face="Arial">c</font><font face="Arial">is<b>’’</b>/des<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;554.365</font></td>
+</tr>
+<tr>
+<td><font face="Arial">52</font></td>
+<td><font face="Arial">C5</font></td>
+<td><font face="Arial">c<b>’’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;523.251</font></td>
+</tr>
+<tr>
+<td><font face="Arial">51</font></td>
+<td><font face="Arial">B4</font></td>
+<td><font face="Arial">h<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;493.883</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">50</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">4/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">4</font></td>
+<td><font face="Arial">ais<b>’</b>/b<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;466.164</font></td>
+</tr>
+<tr>
+<td bgcolor="#66FF33"><font face="Arial">49</font></td>
+<td bgcolor="#66FF33"><font face="Arial"><b>A4 concert pitch</b>&nbsp;</font></td>
+<td bgcolor="#66FF33"><font face="Arial"><b>a’</b> Kammerton&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+<td bgcolor="#66FF33"><font face="Arial">&nbsp;&nbsp;&nbsp;440.000</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">48</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">4/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">4</font></td>
+<td><font face="Arial">gis<b>’</b>/as<b>'’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;415.305</font></td>
+</tr>
+<tr>
+<td><font face="Arial">47</font></td>
+<td><font face="Arial">G4</font></td>
+<td><font face="Arial">g<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;391.995</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">46</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">4/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">4</font></td>
+<td><font face="Arial">fis<b>’</b>/ges<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;369.994</font></td>
+</tr>
+<tr>
+<td><font face="Arial">45</font></td>
+<td><font face="Arial">F4</font></td>
+<td><font face="Arial">f<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;349.228</font></td>
+</tr>
+<tr>
+<td><font face="Arial">44</font></td>
+<td><font face="Arial">E4</font></td>
+<td><font face="Arial">e<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;329.628</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">43</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">4/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">4</font></td>
+<td><font face="Arial">dis<b>’</b>/es<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;311.127</font></td>
+</tr>
+<tr>
+<td><font face="Arial">42</font></td>
+<td><font face="Arial">D4</font></td>
+<td><font face="Arial">d<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;293.665</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">41</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">4/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">4</font></td>
+<td><font face="Arial">cis<b>’</b>/des<b>’</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;277.183</font></td>
+</tr>
+<tr>
+<td bgcolor="#C0C0C0"><font face="Arial">40</font></td>
+<td bgcolor="#C0C0C0"><font face="Arial">C4 (middle C)</font></td>
+<td bgcolor="#C0C0C0"><font face="Arial">c<b>’</b> (Schloss-C)</font></td>
+<td bgcolor="#C0C0C0"><font face="Arial">&nbsp;&nbsp;&nbsp;261.626</font></td>
+</tr>
+<tr>
+<td><font face="Arial">39</font></td>
+<td><font face="Arial">B3</font></td>
+<td><font face="Arial">h</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;246.942</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">38</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">3/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">3</font></td>
+<td><font face="Arial">ais/b</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;233.082</font></td>
+</tr>
+<tr>
+<td><font face="Arial">37</font></td>
+<td><font face="Arial">A3</font></td>
+<td><font face="Arial">a</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;220.000</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">36</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">3/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">3</font></td>
+<td><font face="Arial">gis/as</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;207.652</font></td>
+</tr>
+<tr>
+<td><font face="Arial">35</font></td>
+<td><font face="Arial">G3</font></td>
+<td><font face="Arial">g</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;195.998</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">34</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">3/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">3</font></td>
+<td><font face="Arial">fis/ges</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;184.997</font></td>
+</tr>
+<tr>
+<td><font face="Arial">33</font></td>
+<td><font face="Arial">F3</font></td>
+<td><font face="Arial">f</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;174.614</font></td>
+</tr>
+<tr>
+<td><font face="Arial">32</font></td>
+<td><font face="Arial">E3</font></td>
+<td><font face="Arial">e</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;164.814</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">31</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">3/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">3</font></td>
+<td><font face="Arial">dis/es</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;155.563</font></td>
+</tr>
+<tr>
+<td><font face="Arial">30</font></td>
+<td><font face="Arial">D3</font></td>
+<td><font face="Arial">d</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;146.832</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">29</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">3/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">3</font></td>
+<td><font face="Arial">cis/des</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;138.591</font></td>
+</tr>
+<tr>
+<td><font face="Arial">28</font></td>
+<td><font face="Arial">C3</font></td>
+<td><font face="Arial">c</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;130.813</font></td>
+</tr>
+<tr>
+<td><font face="Arial">27</font></td>
+<td><font face="Arial">B2</font></td>
+<td><font face="Arial">H</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;123.471</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">26</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">2/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">2</font></td>
+<td><font face="Arial">Ais/B</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;116.541</font></td>
+</tr>
+<tr>
+<td><font face="Arial">25</font></td>
+<td><font face="Arial">A2</font></td>
+<td><font face="Arial">A</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;110.000</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">24</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">2/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">2</font></td>
+<td><font face="Arial">Gis/As</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;103.826</font></td>
+</tr>
+<tr>
+<td><font face="Arial">23</font></td>
+<td><font face="Arial">G2</font></td>
+<td><font face="Arial">G</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97.9989</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">22</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">2/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">2</font></td>
+<td><font face="Arial">Fis/Ges</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;92.4986</font></td>
+</tr>
+<tr>
+<td><font face="Arial">21</font></td>
+<td><font face="Arial">F2</font></td>
+<td><font face="Arial">F</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87.3071</font></td>
+</tr>
+<tr>
+<td><font face="Arial">20</font></td>
+<td><font face="Arial">E2</font></td>
+<td><font face="Arial">E</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82.4069</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">19</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">2/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">2</font></td>
+<td><font face="Arial">Dis/Es</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77.7817</font></td>
+</tr>
+<tr>
+<td><font face="Arial">18</font></td>
+<td><font face="Arial">D2</font></td>
+<td><font face="Arial">D</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73.4162</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">17</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">2/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">2</font></td>
+<td><font face="Arial">Cis/Des</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69.2957</font></td>
+</tr>
+<tr>
+<td><font face="Arial">16</font></td>
+<td><font face="Arial">C2 (low C) </font></td>
+<td><font face="Arial">C</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65.4064</font></td>
+</tr>
+<tr>
+<td><font face="Arial">15</font></td>
+<td><font face="Arial">B1</font></td>
+<td><font face="Arial"><b>,</b>H</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61.7354</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">14</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1</font></td>
+<td><font face="Arial"><b>,</b>Ais/<b>,</b>B&nbsp;&nbsp;&nbsp;&nbsp;<font face="Times">~</font>60 Hz</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;58.2705</font></td>
+</tr>
+<tr>
+<td><font face="Arial">13</font></td>
+<td><font face="Arial">A1</font></td>
+<td><font face="Arial"><b>,</b>A</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55.0000</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">12</font></td>
+<td><font face="Arial">G<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/A<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1</font></td>
+<td><font face="Arial"><b>,</b>Gis/<b>,</b>As</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51.9130</font></td>
+</tr>
+<tr>
+<td><font face="Arial">11</font></td>
+<td><font face="Arial">G1</font></td>
+<td><font face="Arial"><b>,</b>G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Times">~</font>50 Hz</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48.9995</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">10</font></td>
+<td><font face="Arial">F<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/G<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1</font></td>
+<td><font face="Arial"><b>,</b>Fis/<b>,</b>Ges</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46.2493</font></td>
+</tr>
+<tr>
+<td><font face="Arial">9</font></td>
+<td><font face="Arial">F1</font></td>
+<td><font face="Arial"><b>,</b>F</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.6536</font></td>
+</tr>
+<tr>
+<td><font face="Arial">8</font></td>
+<td><font face="Arial">E1</font></td>
+<td><font face="Arial"><b>,</b>E</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41.2035</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">7</font></td>
+<td><font face="Arial">D<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/E<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1</font></td>
+<td><font face="Arial"><b>,</b>Dis/<b>,</b>Es</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38.8909</font></td>
+</tr>
+<tr>
+<td><font face="Arial">6</font></td>
+<td><font face="Arial">D1</font></td>
+<td><font face="Arial"><b>,</b>D</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36.7081</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">5</font></td>
+<td><font face="Arial">C<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/D<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1</font></td>
+<td><font face="Arial"><b>,</b>Cis/<b>,</b>Des</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34.6479</font></td>
+</tr>
+<tr>
+<td><font face="Arial">4</font></td>
+<td><font face="Arial">C1</font></td>
+<td><font face="Arial"><b>,</b>C</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.7032</font></td>
+</tr>
+<tr>
+<td><font face="Arial">3</font></td>
+<td><font face="Arial">B0</font></td>
+<td><font face="Arial"><b>,,</b>H</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30.8677</font></td>
+</tr>
+<tr>
+<td bgcolor="black"><font color="white" face="Arial">2</font></td>
+<td><font face="Arial">A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">0/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">0</font></td>
+<td><font face="Arial"><b>,,</b>Ais/<b>,,</b>B</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29.1353</font></td>
+</tr>
+<tr>
+<td><font face="Arial">1</font></td>
+<td><font face="Arial">A0 - First tone</font></td>
+<td><font face="Arial"><b>,,</b>A - Lowest</font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27.5000&nbsp;&nbsp;</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">In the twelve-semitone scale the frequency of the next semitone (halftone) is higher by<br>
+the factor of twelfth root of two = 1.0594630943592952645618252949463 or lower by<br>
+the factor 0.94387431268169349664191315666757.</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">A sound engineer should know the following: The AC hum of <b>50 Hz</b> in Europe is close to<br>
+the pitch of G1 = 48.99 Hz (49 Hz). The AC hum of <b>60 Hz</b> in the U.S. is a minor third higher<br>
+close to the pitch of A<img src="./Frequenies of Music Notes_files/Sharp01.gif" alt="#" width="6" height="16">1/B<img src="./Frequenies of Music Notes_files/Flat01.gif" alt="b" width="7" height="13">1 = 58.27 Hz (58 Hz).<br>
+So you can find out logically, whether a sound recording was made in Europe or in the U.S.</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">A pure tone with the frequency </font><font size="4" face="Times"><i>f</i></font><font face="Arial"> = 440 Hz has the amplitude function:</font><br>
+<font size="4" face="Times"><i>A</i></font><font face="Arial"> = sin (880 </font><font size="4" face="Times"><i>&#960;</i></font><font face="Arial">×<i>t</i>) - where </font><font size="4" face="Times"><i>t</i></font><font face="Arial"> is given in seconds.</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">The following equation will give the frequency <font size="4" face="Times"><i>f</i></font> of the<br>
+<font size="4" face="Times"><i>n</i></font>th piano key number, as shown in the table:<br>
+<img width="185" height="24" src="./Frequenies of Music Notes_files/Rechner-notennamen_clip01.gif" alt="f(n) = 440\ (\sqrt[12]{2}\,)^{n-49}\,"><br>
+Alternatively, this can be written as:<br>
+<img src="./Frequenies of Music Notes_files/Rechner-notennamen_clip02.gif" alt="f(n) = 440 \times 2^{\frac{n-49}{12}}\," width="159" height="27"></font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">"Middle C" is in any case only approximately in the middle for the<br>
+modern concert piano. For most other instruments it is not in the middle<br>
+at all. It is is the lowest note on the standard flute, almost the highest note<br>
+on the bassoon. Notationally it is the point of symmetry between the<br>
+treble and bass staffs (the current position of the clefs being relatively<br>
+modern inventions, and relative to modern human vocal ranges); that is<br>
+the only other sense in which it is "in the middle".</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/Notenlinie.gif" alt="Notenlinie" width="666" height="51"></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="5" face="Arial"><b>Notes and keyboard</b></font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/NotesAndKeyboardA.gif" alt="Notes and keybord" width="551" height="147"></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="4" face="Arial">The concert pitch A<sub>4</sub> = a<b>’</b> on the piano lies in the<br>
+octave between C<sub>4 </sub>= c<b>’</b> (middle C) and C<sub>5</sub>= c<b>’’</b>.</font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/PianoOctave.gif" alt="One octave" width="304" height="188"></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="4" face="Arial"><b>The middle C note as octave C<sub>4</sub> and the next octave C<sub>5</sub>.</b></font><br>
+<font size="1">&nbsp;</font><br>
+<font face="Arial">"Middle C" is designated C<sub>4</sub> in scientific pitch notation with a frequency of 261.6 Hz,<br>
+because of the note's position as the fourth C key on a standard 88 key piano keyboard.</font><br>
+<font size="1">&nbsp;</font><br>
+<font face="Arial"> Some manufacturers label the 440 Hz concert pitch not correctly as A3. <b>It is really A4.</b></font><br>
+<font size="2" face="Arial">Cubase, Akai, and ProTools are starting differently at octave &#8722;2, or octave 1. That's not the standard.<br>
+The first tone is the note A0 and that is 27.5 Hz. The classical music world is counting this way.<br>
+The tuning pitch for the Western music (concert pitch), is 440 Hz. It is named A4 or a’.</font></p>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">Musical note A4: </font><a href="http://www.wolframalpha.com/input/?i=musical+note+A4&amp;lk=1"><font face="Arial" color="blue">http://www.wolframalpha.com/input/?i=musical+note+A4&amp;lk=1</font></a></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<table border="1" align="center" cellpadding="1" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td colspan="10" align="center" style="background:#EFEFEF"><font size="4" face="Arial"><b>Name and frequency of the octave positions</b></font></td>
+</tr>
+<tr>
+<td width="112" style="background:#EFEFEF"><b><font face="Arial">English</font></b></td>
+<td width="40" align="center">A0</td>
+<td width="40" align="center">A1</td>
+<td width="40" align="center">A2</td>
+<td width="40" align="center">A3</td>
+<td width="40" bgcolor="#66FF33" align="center">A4</td>
+<td width="40" align="center">A5</td>
+<td width="40" align="center">A6</td>
+<td width="40" align="center">A7</td>
+<td width="40" align="center">A8</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b><font face="Arial">German</font></b></td>
+<td align="center"><font face="Arial"><b>,,</b></font>A</td>
+<td align="center"><b>,</b>A</td>
+<td align="center">A</td>
+<td align="center">a</td>
+<td bgcolor="#66FF33" align="center">a<font face="Arial"><b>’</b></font></td>
+<td align="center">a<font face="Arial"><b>’’</b></font></td>
+<td align="center">a<font face="Arial"><b>’’’</b></font></td>
+<td align="center">a<font face="Arial"><b>’’’’</b></font></td>
+<td align="center">a<font face="Arial"><b>’’’’’</b></font></td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b><font face="Arial">Frequency in Hz</font>&nbsp;</b></td>
+<td align="center"><font face="Arial">27.5</font></td>
+<td align="center"><font face="Arial">55</font></td>
+<td align="center"><font face="Arial">110</font></td>
+<td align="center"><font face="Arial">220</font></td>
+<td bgcolor="#66FF33" align="center"><font face="Arial">440</font></td>
+<td align="center"><font face="Arial">880</font></td>
+<td align="center"><font face="Arial">1760</font></td>
+<td align="center"><font face="Arial">3520</font></td>
+<td align="center"><font face="Arial">7040</font></td>
+</tr>
+</tbody></table>
+<p align="center"><font face="Arial">Numbers of the lowest c note for the respective musical octave.</font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/OktavEinteilung.gif" alt="All octaves" width="583" height="355"></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="5" face="Arial"><b>Ranges of some popular instruments</b></font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td><font face="Arial"><b>Instrument</b></font></td>
+<td><font face="Arial"><b>&nbsp;Start&nbsp;</b></font></td>
+<td><b><font face="Arial">&nbsp;End&nbsp;&nbsp;</font></b></td>
+</tr>
+<tr>
+<td><font face="Arial">guitar</font></td>
+<td align="center"><font face="Arial">E2</font></td>
+<td align="center"><font face="Arial">E6</font></td>
+</tr>
+<tr>
+<td><font face="Arial">seven string guitar</font></td>
+<td align="center"><font face="Arial">B1</font></td>
+<td align="center"><font face="Arial">E6</font></td>
+</tr>
+<tr>
+<td><font face="Arial">cello</font></td>
+<td align="center"><font face="Arial">C2</font></td>
+<td align="center"><font face="Arial">A6</font></td>
+</tr>
+<tr>
+<td><font face="Arial">4-string bass guitar</font></td>
+<td align="center"><font face="Arial">E1</font></td>
+<td align="center"><font face="Arial">E5</font></td>
+</tr>
+<tr>
+<td><font face="Arial">piano</font></td>
+<td align="center"><font face="Arial">A0</font></td>
+<td align="center"><font face="Arial">C8</font></td>
+</tr>
+<tr>
+<td><font face="Arial">piccolo</font></td>
+<td align="center"><font face="Arial">C5</font></td>
+<td align="center"><font face="Arial">C8</font></td>
+</tr>
+<tr>
+<td><font face="Arial">violin</font></td>
+<td align="center"><font face="Arial">G3</font></td>
+<td align="center"><font face="Arial">E7</font></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="5" face="Arial"><b>All piano keys</b></font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/KeyboardAndFrequencies.gif" alt="Oktaveinteilung" width="798" height="183"></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<table border="1" align="center" cellpadding="1" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td colspan="12" align="center"><font size="4" face="Arial"><b>Frequencies of the equal temperament &#8722; table or chart</b></font></td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>Octave</b></td>
+<td align="center" style="background:#EFEFEF">0</td>
+<td align="center" style="background:#EFEFEF">1</td>
+<td align="center" style="background:#EFEFEF">2</td>
+<td align="center" style="background:#EFEFEF">3</td>
+<td align="center" style="background:#EFEFEF">4</td>
+<td align="center" style="background:#EFEFEF">5</td>
+<td align="center" style="background:#EFEFEF">6</td>
+<td align="center" style="background:#EFEFEF">7</td>
+<td align="center" style="background:#EFEFEF">8</td>
+<td align="center" style="background:#EFEFEF">9</td>
+<td align="center" style="background:#EFEFEF">10</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>C / B#</b></td>
+<td align="center">16.352</td>
+<td align="center">32.703</td>
+<td align="center">65.406</td>
+<td align="center">130.813</td>
+<td bgcolor="#C0C0C0" align="center">261.626</td>
+<td align="center">523.251</td>
+<td align="center">1046.502</td>
+<td align="center">2093.005</td>
+<td align="center">4186.009</td>
+<td align="center">8372.018</td>
+<td align="center">16744.036</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>C# / Db</b></td>
+<td align="center">17.324</td>
+<td align="center">34.648</td>
+<td align="center">69.296</td>
+<td align="center">138.591</td>
+<td align="center">277.183</td>
+<td align="center">554.365</td>
+<td align="center">1108.731</td>
+<td align="center">2217.461</td>
+<td align="center">4434.922</td>
+<td align="center">8869.844</td>
+<td align="center">17739.688</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>D</b></td>
+<td align="center">18.354</td>
+<td align="center">36.708</td>
+<td align="center">73.416</td>
+<td align="center">146.832</td>
+<td align="center">293.665</td>
+<td align="center">587.330</td>
+<td align="center">1174.659</td>
+<td align="center">2349.318</td>
+<td align="center">4698.636</td>
+<td align="center">9397.273</td>
+<td>18794.545</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>D# / Eb</b></td>
+<td align="center">19.445</td>
+<td align="center">38.891</td>
+<td align="center">77.782</td>
+<td align="center">155.563</td>
+<td align="center">311.127</td>
+<td align="center">622.254</td>
+<td align="center">1244.508</td>
+<td align="center">2489.016</td>
+<td align="center">4978.032</td>
+<td align="center">9956.063</td>
+<td align="center">19912.127</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>E / Fb</b></td>
+<td align="center">20.602</td>
+<td align="center">41.203</td>
+<td align="center">82.407</td>
+<td align="center">164.814</td>
+<td align="center">329.628</td>
+<td align="center">659.255</td>
+<td align="center">1318.510</td>
+<td align="center">2637.020</td>
+<td align="center">5274.041</td>
+<td align="center">10548.082</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>F / E#</b></td>
+<td align="center">21.827</td>
+<td align="center">43.654</td>
+<td align="center">87.307</td>
+<td align="center">174.614</td>
+<td align="center">349.228</td>
+<td align="center">698.456</td>
+<td align="center">1396.913</td>
+<td align="center">2793.826</td>
+<td align="center">5587.652</td>
+<td align="center">11175.303</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>F# / Gb</b></td>
+<td align="center">23.125</td>
+<td align="center">46.249</td>
+<td align="center">92.499</td>
+<td align="center">184.997</td>
+<td align="center">369.994</td>
+<td align="center">739.989</td>
+<td align="center">1479.978</td>
+<td align="center">2959.955</td>
+<td align="center">5919.911</td>
+<td align="center">11839.822</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>G</b></td>
+<td align="center">24.500</td>
+<td align="center">48.999</td>
+<td align="center">97.999</td>
+<td align="center">195.998</td>
+<td align="center">391.995</td>
+<td align="center">783.991</td>
+<td align="center">1567.982</td>
+<td align="center">3135.963</td>
+<td align="center">6271.927</td>
+<td align="center">12543.854</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>G# / Ab</b></td>
+<td align="center">25.957</td>
+<td align="center">51.913</td>
+<td align="center">103.826</td>
+<td align="center">207.652</td>
+<td align="center">415.305</td>
+<td align="center">830.609</td>
+<td align="center">1661.219</td>
+<td align="center">3322.438</td>
+<td align="center">6644.875</td>
+<td align="center">13289.750</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>A</b></td>
+<td align="center">27.500</td>
+<td align="center">55.000</td>
+<td align="center">110.000</td>
+<td align="center">220.000</td>
+<td bgcolor="#66FF33" align="center"><b>440.000</b></td>
+<td align="center">880.000</td>
+<td align="center">1760.000</td>
+<td align="center">3520.000</td>
+<td align="center">7040.000</td>
+<td align="center">14080.000</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>A# / Bb</b></td>
+<td align="center">29.135</td>
+<td align="center">58.270</td>
+<td align="center">116.541</td>
+<td align="center">233.082</td>
+<td align="center">466.164</td>
+<td align="center">932.328</td>
+<td align="center">1864.655</td>
+<td align="center">3729.310</td>
+<td align="center">7458.620</td>
+<td align="center">14917.240</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td style="background:#EFEFEF"><b>B / Cb</b></td>
+<td align="center">30.868</td>
+<td align="center">61.735</td>
+<td align="center">123.471</td>
+<td align="center">246.942</td>
+<td align="center">493.883</td>
+<td align="center">987.767</td>
+<td align="center">1975.533</td>
+<td align="center">3951.066</td>
+<td align="center">7902.133</td>
+<td align="center">15804.266</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p align="center"><font face="Arial"><b>Comparing the Frequency Ratios for Equal Temperament and Pure Harmonic Series</b></font></p>
+<table border="1" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center"><img src="./Frequenies of Music Notes_files/Root-Ratios.gif" alt="Interval table" width="383" height="269" border="0"></td>
+</tr>
+</tbody></table>
+<br>
+<center><font size="5" face="Arial"><b>Size (Measure) of all Steinway Grand Pianos</b></font></center>
+<font size="1">&nbsp;</font><br>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td width="60" align="center"><font face="Arial"><b>Type</b></font></td>
+<td width="60" align="center"><font face="Arial"><b>Length</b></font></td>
+<td width="60" align="center"><b><font face="Arial">Width</font></b></td>
+<td width="60" align="center"><b><font face="Arial">Height</font></b></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">S</font></td>
+<td><font face="Arial">155 cm</font></td>
+<td><font face="Arial">147 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">M</font></td>
+<td><font face="Arial">170 cm</font></td>
+<td><font face="Arial">147 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">O</font></td>
+<td><font face="Arial">180 cm</font></td>
+<td><font face="Arial">147 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">A</font></td>
+<td><font face="Arial">188 cm</font></td>
+<td><font face="Arial">147 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">B</font></td>
+<td><font face="Arial">211 cm</font></td>
+<td><font face="Arial">148 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">C</font></td>
+<td><font face="Arial">227 cm</font></td>
+<td><font face="Arial">155 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+<tr>
+<td align="center"><font face="Arial">D</font></td>
+<td><font face="Arial">274 cm</font></td>
+<td><font face="Arial">157 cm</font></td>
+<td><font face="Arial">101 cm</font></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<center><a href="http://www.sengpielaudio.com/Rechner-centfrequenz.htm" target="_blank"><font size="5" color="blue" face="Arial"><b>Interval conversions - Frequency ratio to cents and vice versa</b></font></a><br>
+<font size="1">&nbsp;</font><br>
+<a href="http://www.sengpielaudio.com/FrequenzbereichMusikinstrumente.pdf" target="_blank"><font size="4" color="blue" face="Arial"><b>Frequency domain of musical instruments, singing voices (vocals), and keyboards</b></font></a><br>
+<font size="1">&nbsp;</font><br>
+<font size="5" face="Arial"><b>Vocal range:</b></font></center>
+<font size="1">&nbsp;</font><br>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td><font face="Arial"><b>Pitch</b></font></td>
+<td><font face="Arial"><b>Start</b></font></td>
+<td><b><font face="Arial">End</font></b></td>
+</tr>
+<tr>
+<td><font face="Arial">Bass</font></td>
+<td><font face="Arial">&nbsp;&nbsp;82 Hz</font></td>
+<td><font face="Arial">&nbsp;&nbsp;349 Hz</font></td>
+</tr>
+<tr>
+<td><font face="Arial">Bariton</font></td>
+<td><font face="Arial">&nbsp;&nbsp;89 Hz</font></td>
+<td><font face="Arial">&nbsp;&nbsp;392 Hz</font></td>
+</tr>
+<tr>
+<td><font face="Arial">Tenor</font></td>
+<td><font face="Arial">131 Hz</font></td>
+<td><font face="Arial">&nbsp;&nbsp;494 Hz</font></td>
+</tr>
+<tr>
+<td><font face="Arial">Alt</font></td>
+<td><font face="Arial">175 Hz </font></td>
+<td><font face="Arial">&nbsp;&nbsp;699 Hz</font></td>
+</tr>
+<tr>
+<td><font face="Arial">Soprano</font></td>
+<td><font face="Arial">247 Hz</font></td>
+<td><font face="Arial">1175 Hz</font></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<center><font face="Arial"><b>... and showing the keyboard, and the note names.</b></font></center>
+<p align="center"><font size="5" face="Arial"><b>Guitar Fret Board with Notes</b></font></p>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img src="./Frequenies of Music Notes_files/GuitarNoteNames02.gif" alt="Guitar Note Names" width="772" height="212"></td>
+</tr>
+</tbody></table>
+<p align="center"><a href="http://www.google.com/search?hl=en&amp;q=sengpielaudio.com+MIDI&amp;filter=0" target="_blank"><font face="Arial" size="5" color="blue"><b>MIDI</b></font></a><font face="Arial" size="5"><b> note numbers (midi files)</b></font></p>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">Octave notation is given here in the international standard ISO system, formerly known as<br>
+the ASA (Acoustical Society of America) or ANSI system. In this system, middle C (MIDI<br>
+note number 60) is C4; octaves start with C, so the B just below (MIDI number 59) is B3.<br>
+The lowest note of the normal modern piano is A0 (MIDI 21), though Boesendorfer<br>
+Imperials go down to F0 or even C0. The highest note of the piano is C8 (MIDI 108).</font></td>
+</tr>
+</tbody></table>
+<br>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td rowspan="2" align="center"><b>Octave #</b></td>
+<td colspan="12" align="center"><font size="4" face="Arial"><b>MIDI Note Numbers</b></font></td>
+</tr>
+<tr style="background:#EFEFEF">
+<td align="center"><b>C</b></td>
+<td align="center"><b>C#</b></td>
+<td align="center"><b>D</b></td>
+<td align="center"><b>D#</b></td>
+<td align="center"><b>E</b></td>
+<td align="center"><b>F</b></td>
+<td align="center"><b>F#</b></td>
+<td align="center"><b>G</b></td>
+<td align="center"><b>G#</b></td>
+<td align="center"><b>A</b></td>
+<td align="center"><b>A#</b></td>
+<td align="center"><b>B</b></td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>&#8722;1</b></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>0</b></td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+<td align="center">18</td>
+<td align="center">19</td>
+<td align="center">20</td>
+<td align="center">21</td>
+<td align="center">22</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>1</b></td>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+<td align="center">28</td>
+<td align="center">29</td>
+<td align="center">30</td>
+<td align="center">31</td>
+<td align="center">32</td>
+<td align="center">33</td>
+<td align="center">34</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>2</b></td>
+<td align="center">36</td>
+<td align="center">37</td>
+<td align="center">38</td>
+<td align="center">39</td>
+<td align="center">40</td>
+<td align="center">41</td>
+<td align="center">42</td>
+<td align="center">43</td>
+<td align="center">44</td>
+<td align="center">45</td>
+<td align="center">46</td>
+<td align="center">47</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>3</b></td>
+<td align="center">48</td>
+<td align="center">49</td>
+<td align="center">50</td>
+<td align="center">51</td>
+<td align="center">52</td>
+<td align="center">53</td>
+<td align="center">54</td>
+<td align="center">55</td>
+<td align="center">56</td>
+<td align="center">57</td>
+<td align="center">58</td>
+<td align="center">59</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>4</b></td>
+<td align="center" style="background:#C0C0C0"><b>60</b></td>
+<td align="center">61</td>
+<td align="center">62</td>
+<td align="center">63</td>
+<td align="center">64</td>
+<td align="center">65</td>
+<td align="center">66</td>
+<td align="center">67</td>
+<td align="center">68</td>
+<td bgcolor="#66FF33" align="center"><b>69</b></td>
+<td align="center">70</td>
+<td align="center">71</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>5</b></td>
+<td align="center">72</td>
+<td align="center">73</td>
+<td align="center">74</td>
+<td align="center">75</td>
+<td align="center">76</td>
+<td align="center">77</td>
+<td align="center">78</td>
+<td align="center">79</td>
+<td align="center">80</td>
+<td align="center">81</td>
+<td align="center">82</td>
+<td align="center">83</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>6</b></td>
+<td align="center">84</td>
+<td align="center">85</td>
+<td align="center">86</td>
+<td align="center">87</td>
+<td align="center">88</td>
+<td align="center">89</td>
+<td align="center">90</td>
+<td align="center">91</td>
+<td align="center">92</td>
+<td align="center">93</td>
+<td align="center">94</td>
+<td align="center">95</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>7</b></td>
+<td align="center">96</td>
+<td align="center">97</td>
+<td align="center">98</td>
+<td align="center">99</td>
+<td align="center">100</td>
+<td align="center">101</td>
+<td align="center">102</td>
+<td align="center">103</td>
+<td align="center">104</td>
+<td align="center">105</td>
+<td align="center">106</td>
+<td align="center">107</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>8</b></td>
+<td align="center">108</td>
+<td align="center">109</td>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">112</td>
+<td align="center">113</td>
+<td align="center">114</td>
+<td align="center">115</td>
+<td align="center">116</td>
+<td align="center">117</td>
+<td align="center">118</td>
+<td align="center">119</td>
+</tr>
+<tr>
+<td align="center" style="background:#EFEFEF"><b>9</b></td>
+<td align="center">120</td>
+<td align="center">121</td>
+<td align="center">122</td>
+<td align="center">123</td>
+<td align="center">124</td>
+<td align="center">125</td>
+<td align="center">126</td>
+<td align="center">127</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+<br>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial"><b>Note:</b> The MIDI specification only defines note number 60 as "Middle C", and all<br>
+other notes are relative. The absolute octave number designations shown here<br>
+are based on Middle C = C4, which is an arbitrary assignment.</font></td>
+</tr>
+</tbody></table>
+<br>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">Method for finding the corresponding MIDI note number for a given frequency:<br>
+Original expression <font face="Times"><i>f</i></font> = 440 × 2<sup>(<font size="4" face="Times"><i>n</i></font> &#8722; 69) / 12</sup></font><br>
+<font face="Arial">Simplification step 1: <font face="Times"><i>f</i></font><i> / </i> 440 = 2<sup>(<font size="4" face="Times"><i>n</i></font> &#8722; 69) / 12</sup></font><br>
+<font face="Arial">Simplification step 2: log<sub>2</sub> (<font face="Times"><i>f</i></font><i> / </i> 440) = (<font size="4" face="Times"><i>n</i></font> &#8722; 69)<i> / </i>12<br>
+Simplification step 3: 12 × log<sub>2</sub> (<font face="Times"><i>f / </i></font>440) = <font size="4" face="Times"><i>n</i></font> – 69</font><br>
+<font size="1">&nbsp;</font><br>
+<font face="Arial">Formula for finding a MIDI note number given the frequency in Hz of the MIDI note:</font><br>
+<font size="4" face="Times"><i>n</i></font><font face="Arial"> = (12 × log<sub>2</sub> (<font face="Times"><i>f / </i></font>440)) + 69</font><br>
+<font face="Arial">Given the frequency </font><font face="Times"><i>f</i></font><font face="Arial"> for a note in Hz, it is possible to find the corresponding MIDI<br>
+note number represented by the variable </font><font size="4" face="Times"><i>n</i></font>.<br>
+<font size="1">&nbsp;</font><br>
+<font size="2" face="Arial">One version of the MIDI system uses C3 to designate Middle C (MIDI note 60 = 261.626 Hz).<br>
+That means that the octave designation for MIDI note "0" would be "-2" or notated as C-2.<br> 
+Another version of the MIDI system uses the lowest note available to the MIDI system.<br>
+MIDI note 1 = 8.176 Hz to designate Octave "0" with the notation of C0.<br>
+<b>"Middle C" is the MIDI note 60 = 261.626 Hz. That is octave 4 with the notation of C4.</b></font></td>
+</tr>
+</tbody></table>
+<p align="center"><font size="5" face="Arial"><b>MIDI Notes and their corresponding frequencies</b></font><br>
+<font size="1">&nbsp;</font><br>
+<font size="4" face="Arial"><b>The frequency 261.626 Hz = C4 (middle C)</b>,<br>
+and not C5 or C3, how some firms try to explain us; look at:</font><br>
+<a href="http://www.music.vt.edu/musicdictionary/appendix/octaveregisters/octaveregisters.html" target="_blank"><font face="Arial" color="blue">http://www.music.vt.edu/musicdictionary/appendix/octaveregisters/octaveregisters.html</font></a></p>
+<table border="1" align="center" cellpadding="1" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr style="background:#EFEFEF">
+<td><font face="Arial"><b>Note</b></font></td>
+<td><font face="Arial"><b>MIDI</b></font></td>
+<td><font face="Arial"><b>Hz</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+<td><font face="Arial"><b>Note</b></font></td>
+<td><font face="Arial"><b>MIDI</b></font></td>
+<td><font face="Arial"><b>Hz</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+<td><font face="Arial"><b>Note</b></font></td>
+<td><font face="Arial"><b>MIDI</b></font></td>
+<td><font face="Arial"><b>Hz</b></font></td>
+<td><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+<td><font face="Arial"><b>Note</b></font></td>
+<td><font face="Arial"><b>MIDI</b></font></td>
+<td><font face="Arial"><b>Hz</b></font></td>
+</tr>
+<tr>
+<td height="24">C -</td>
+<td>0</td>
+<td>8.176</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 1</td>
+<td>32</td>
+<td>51.913</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 4</td>
+<td>64</td>
+<td>329.63</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 7</td>
+<td>96</td>
+<td>2093.0</td>
+</tr>
+<tr>
+<td>C# -</td>
+<td>1</td>
+<td>8.662</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 1</td>
+<td>33</td>
+<td>55.000</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 4</td>
+<td>65</td>
+<td>349.23</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 7</td>
+<td>97</td>
+<td>2217.5</td>
+</tr>
+<tr>
+<td>D -</td>
+<td>2</td>
+<td>9.177</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 1</td>
+<td>34</td>
+<td>58.270</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 4</td>
+<td>66</td>
+<td>369.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 7</td>
+<td>98</td>
+<td>2349.3</td>
+</tr>
+<tr>
+<td>D# -</td>
+<td>3</td>
+<td>9.723</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 1</td>
+<td>35</td>
+<td>61.735</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 4</td>
+<td>67</td>
+<td>391.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 7</td>
+<td>99</td>
+<td>2489.0</td>
+</tr>
+<tr>
+<td>E -</td>
+<td>4</td>
+<td>10.301&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 2</td>
+<td>36</td>
+<td>65.406</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 4</td>
+<td>68</td>
+<td>415.31</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 7</td>
+<td>100</td>
+<td>2637.0</td>
+</tr>
+<tr>
+<td>F -</td>
+<td>5</td>
+<td>10.913</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 2</td>
+<td>37</td>
+<td>69.295</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#66FF33">A 4</td>
+<td bgcolor="#66FF33"><b>69</b></td>
+<td bgcolor="#66FF33">440.00</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 7</td>
+<td>101</td>
+<td>2793.8</td>
+</tr>
+<tr>
+<td height="25">F# -</td>
+<td>6</td>
+<td>11.562</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 2</td>
+<td>38</td>
+<td>73.416</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 4</td>
+<td>70</td>
+<td>466.16</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 7</td>
+<td>102</td>
+<td>2960.0</td>
+</tr>
+<tr>
+<td>G -</td>
+<td>7</td>
+<td>12.250</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 2</td>
+<td>39</td>
+<td>77.781</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 4</td>
+<td>71</td>
+<td>493.88</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 7</td>
+<td>103</td>
+<td>3136.0</td>
+</tr>
+<tr>
+<td>G# -</td>
+<td>8</td>
+<td>12.978</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 2</td>
+<td>40</td>
+<td>82.406</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 5</td>
+<td>72</td>
+<td>523.25</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 7</td>
+<td>104</td>
+<td>3322.4</td>
+</tr>
+<tr>
+<td>A -</td>
+<td>9</td>
+<td>13.750</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 2</td>
+<td>41</td>
+<td>87.307</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 5</td>
+<td>73</td>
+<td>554.37</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 7</td>
+<td>105</td>
+<td>3520.0</td>
+</tr>
+<tr>
+<td>A# -</td>
+<td>10</td>
+<td>14.568</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 2</td>
+<td>42</td>
+<td>92.499</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 5</td>
+<td>74</td>
+<td>587.33</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 7</td>
+<td>106</td>
+<td>3729.3</td>
+</tr>
+<tr>
+<td>B -</td>
+<td>11</td>
+<td>15.434</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 2</td>
+<td>43</td>
+<td>97.998</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 5</td>
+<td>75</td>
+<td>622.25</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 7</td>
+<td>107</td>
+<td>3951.1</td>
+</tr>
+<tr>
+<td>C 0</td>
+<td>12</td>
+<td>16.352</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 2</td>
+<td>44</td>
+<td>103.82</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 5</td>
+<td>76</td>
+<td>659.26</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 8</td>
+<td>108</td>
+<td>4186.0</td>
+</tr>
+<tr>
+<td>C# 0</td>
+<td>13</td>
+<td>17.324</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 2</td>
+<td>45</td>
+<td>110.00</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 5</td>
+<td>77</td>
+<td>698.46</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 8</td>
+<td>109</td>
+<td>4434.9</td>
+</tr>
+<tr>
+<td>D 0</td>
+<td>14</td>
+<td>18.354</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 2</td>
+<td>46</td>
+<td>116.54</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 5</td>
+<td>78</td>
+<td>739.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 8</td>
+<td>110</td>
+<td>4698.6</td>
+</tr>
+<tr>
+<td>D# 0</td>
+<td>15</td>
+<td>19.445</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 2</td>
+<td>47</td>
+<td>123.47</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 5</td>
+<td>79</td>
+<td>783.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 8</td>
+<td>111</td>
+<td>4978.0</td>
+</tr>
+<tr>
+<td>E 0</td>
+<td>16</td>
+<td>20.601</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 3</td>
+<td>48</td>
+<td>130.81</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 5</td>
+<td>80</td>
+<td>830.61</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 8</td>
+<td>112</td>
+<td>5274.0</td>
+</tr>
+<tr>
+<td>F 0</td>
+<td>17</td>
+<td>21.826</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 3</td>
+<td>49</td>
+<td>138.59</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 5</td>
+<td>81</td>
+<td>880.00</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 8</td>
+<td>113</td>
+<td>5587.7</td>
+</tr>
+<tr>
+<td>F# 0</td>
+<td>18</td>
+<td>23.124</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 3</td>
+<td>50</td>
+<td>146.83</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 5</td>
+<td>82</td>
+<td>932.32</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 8</td>
+<td>114</td>
+<td>5919.9</td>
+</tr>
+<tr>
+<td>G 0</td>
+<td>19</td>
+<td>24.499</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 3</td>
+<td>51</td>
+<td>155.56</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 5</td>
+<td>83</td>
+<td>987.77</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 8</td>
+<td>115</td>
+<td>6271.9</td>
+</tr>
+<tr>
+<td>G# 0</td>
+<td>20</td>
+<td>25.956</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 3</td>
+<td>52</td>
+<td>164.81</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 6</td>
+<td>84</td>
+<td>1046.5</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 8</td>
+<td>116</td>
+<td>6644.9</td>
+</tr>
+<tr>
+<td>A 0</td>
+<td>21</td>
+<td>27.50</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 3</td>
+<td>53</td>
+<td>174.61</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 6</td>
+<td>85</td>
+<td>1108.7</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 8</td>
+<td>117</td>
+<td>7040.0</td>
+</tr>
+<tr>
+<td>A# 0</td>
+<td>22</td>
+<td>29.135</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 3</td>
+<td>54</td>
+<td>184.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 6</td>
+<td>86</td>
+<td>1174.7</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 8</td>
+<td>118</td>
+<td>7458.6</td>
+</tr>
+<tr>
+<td>B 0</td>
+<td>23</td>
+<td>30.867</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 3</td>
+<td>55</td>
+<td>195.99</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 6</td>
+<td>87</td>
+<td>1244.5</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 8</td>
+<td>119</td>
+<td>7902.1</td>
+</tr>
+<tr>
+<td>C 1</td>
+<td>24</td>
+<td>32.703</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 3</td>
+<td>56</td>
+<td>207.65</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 6</td>
+<td>88</td>
+<td>1318.5</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C 9</td>
+<td>120</td>
+<td>8372.0</td>
+</tr>
+<tr>
+<td>C# 1</td>
+<td>25</td>
+<td>34.648</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 3</td>
+<td>57</td>
+<td>220.00</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 6</td>
+<td>89</td>
+<td>1396.9</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 9</td>
+<td>121</td>
+<td>8869.8</td>
+</tr>
+<tr>
+<td>D 1</td>
+<td>26</td>
+<td>36.708</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 3</td>
+<td>58</td>
+<td>233.08</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 6</td>
+<td>90</td>
+<td>1480.0</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 9</td>
+<td>122</td>
+<td>9397.3</td>
+</tr>
+<tr>
+<td>D# 1</td>
+<td>27</td>
+<td>38.890</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 3</td>
+<td>59</td>
+<td>246.94</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 6</td>
+<td>91</td>
+<td>1568.0</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 9</td>
+<td>123</td>
+<td>9956.1</td>
+</tr>
+<tr>
+<td>E 1</td>
+<td>28</td>
+<td>41.203</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td style="background:#C0C0C0">C 4</td>
+<td style="background:#C0C0C0">60</td>
+<td style="background:#C0C0C0">261.63</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G# 6</td>
+<td>92</td>
+<td>1661.2</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>E 9</td>
+<td>124</td>
+<td>10548.1</td>
+</tr>
+<tr>
+<td>F 1</td>
+<td>29</td>
+<td>43.653</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>C# 4</td>
+<td>61</td>
+<td>277.18</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A 6</td>
+<td>93</td>
+<td>1760.0</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F 9</td>
+<td>125</td>
+<td>11175.3</td>
+</tr>
+<tr>
+<td>F# 1</td>
+<td>30</td>
+<td>46.249</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D 4</td>
+<td>62</td>
+<td>293.66</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>A# 6</td>
+<td>94</td>
+<td>1864.7</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>F# 9</td>
+<td>126</td>
+<td>11839.8</td>
+</tr>
+<tr>
+<td>G 1</td>
+<td>31</td>
+<td>48.999</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>D# 4</td>
+<td>63</td>
+<td>311.13</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>B 6</td>
+<td>95</td>
+<td>1975.5</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>G 9</td>
+<td>127</td>
+<td>12543.9</td>
+</tr>
+</tbody></table>
+<p align="center"><img src="./Frequenies of Music Notes_files/Linie06RainbowDick.gif" alt="sengpielaudio" width="576" height="5"></p>
+<p align="center"><font size="5" face="Arial"><b>Frequency to Musical Note Converter</b></font><br>
+<font face="Arial">Find out what musical note a given frequency is. English system.</font></p>
+<form lpformnum="1">
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="background:#EFEFEF">
+<tbody><tr>
+<td>
+<table cellpadding="1" cellspacing="0">
+<tbody><tr>
+<td colspan="2"><font size="1">&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font face="Arial"><b>Frequency</b>&nbsp;</font></td>
+<td><font face="Arial">
+<input name="freq" size="12" value="443" style="background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;) 98% 50% / 16px 18px no-repeat scroll rgb(192, 192, 192);">
+Hz</font></td>
+</tr>
+<tr>
+<td colspan="2"><font size="1">&nbsp;</font></td>
+</tr>
+<tr>
+<td><font size="4">
+<input type="reset" style="background:#6699FF;" value="  reset  ">
+&nbsp;<b>&#8595;</b>&nbsp;&nbsp;</font> </td>
+<td>
+<input type="button" onclick="freq_to_note(this.form)" value="What note is this?" size="20" style="background:#6699FF;">
+</td>
+</tr>
+<tr>
+<td colspan="2"><font size="1">&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font face="Arial"><b>Note</b>&nbsp;</font></td>
+<td>
+<input name="note" size="12" value="" style="background:#FFFFFF">
+</td>
+</tr>
+<tr>
+<td align="right"><font face="Arial"><b>&nbsp;Offset</b>&nbsp;</font></td>
+<td><font face="Arial">
+<input name="cents" size="12" value="" style="background:#FFFFFF">
+cents&nbsp;</font></td>
+</tr>
+<tr>
+<td colspan="2"><font size="1">&nbsp;</font></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</form>
+<table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF"><tbody><tr><td width="430"><table cellspacing="0" cellpadding="0" align="center" border="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><font face="Arial">The frequency of 440 Hz is the concert pitch note <b>A4</b>.<br>
+If someone tells you different, this person is in error.<br>
+<font size="1">&nbsp;</font><br>
+Since 1939 in many countries the valid standard pitch is set at<br>
+A4 = 440 Hz. In German and Austrian symphony orchestras,<br>
+however, a tuning for A4 = 443 Hz is common.<br>
+In Switzerland it is A4 = 442 Hz. Herbert von Karajan tuned his<br>
+Berlin Philharmonic Orchestra at A4 = 444 Hz.<br>
+That is however, not the standard pitch.</font></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><a href="http://www.sengpielaudio.com/calculator-harmonics.htm" target="_blank"><font size="4" face="Arial" color="blue"><b>Overtones, partials and harmonics from fundamental frequency</b></font></a><br>
+<font size="1">&nbsp;</font><br>
+<a href="http://www.sengpielaudio.com/FrequenzbereichMusikinstrumente.pdf" target="_blank"><font size="4" face="Arial" color="blue"><b>Frequency domain of musical instruments, singing voices (vocals), and keyboards</b></font></a><br>
+<font size="1">&nbsp;</font><br>
+<a href="http://www.sengpielaudio.com/calculator-centsratio.htm" target="_blank"><font size="4" color="blue" face="Arial"><b>Conversions of Intervals - Frequency ratio to cents and cents to frequency  ratio</b></font></a></td>
+</tr>
+</tbody></table>
+<p align="center"><a href="http://www.sengpielaudio.com/calculator-notenames.htm#top"><font face="Arial" color="blue"><b>[top of page]</b></font></a></p>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#FFFFFF">
+<tbody><tr>
+<td><a href="http://www.sengpielaudio.com/Feedback.htm" target="_blank"><font size="4" face="Arial" color="blue"><b>Not only take something from this website to enhance your knowledge.<br>
+Please, also give some feedback to the author to improve the performance.</b></font></a></td>
+</tr>
+</tbody></table>
+<font size="1">&nbsp;</font><br>
+<table align="center" width="60%">
+<tbody><tr>
+<td align="center"><a href="http://www.sengpielaudio.com/Calculations03.htm" target="_self"><font face="Arial" color="blue"><b>back </b></font><img src="./Frequenies of Music Notes_files/Pfeil03Links.gif" alt="weiter" width="32" height="20" border="0"></a></td>
+<td align="center"><a href="http://www.sengpielaudio.com/Searchengine.htm" target="_self"><font face="Arial" color="blue"><b>Search Engine </b></font><img src="./Frequenies of Music Notes_files/Pfeil03Rechts.gif" alt="weiter" width="32" height="20" border="0"></a></td>
+<td align="center"><a href="http://www.sengpielaudio.com/index.html"><font face="Arial" color="blue"><b>home </b></font><img src="./Frequenies of Music Notes_files/Pfeil03Top.gif" alt="start" width="32" height="20" border="0"></a></td>
+</tr>
+</tbody></table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try{var pageTracker = _gat._getTracker("UA-4675209-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+</td></tr></tbody></table><script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>
