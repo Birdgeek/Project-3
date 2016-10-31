@@ -1,10 +1,11 @@
 from SoundLib import *
+
 class myClass:
   index = 0
   
 def main():
   #written by Brad Snurka
-  #Version 0.1
+  #Version 0.3
   #10/28/16
   
   #100 BPM
@@ -14,6 +15,7 @@ def main():
   #4410 for eight note
   #2205 for sixteenth
   #17640 for half
+  
   myClass.index = 0
   target = makeEmptySoundBySeconds(30)
   a3 = note(220.00)
@@ -28,6 +30,7 @@ def main():
   target = makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target)
   target = normalize(target)
   explore(target)
+  writeSoundTo(target, getMediaPath("song.wav"))
   
 def makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target):
 
@@ -108,6 +111,61 @@ def makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target):
   copy(c4eighth, target, myClass.index)#
   count(8)
   count(4)
+  copy(a3eighth, target, myClass.index)#
+  count(8)
+  copy(a3eighth, target, myClass.index)
+  count(8)
+  copy(a3sixteen, target, myClass.index)
+  count(16)
+  copy(g3sixteen, target, myClass.index)
+  count(16)
+  copy(a3eighth, target, myClass.index) #
+  count(8) 
+  count(4) #quarter rest
+  copy(b3eighth, target, myClass.index)
+  count(8)
+  copy(b3eighth, target, myClass.index)
+  count(8)
+  copy(c4eighth, target, myClass.index)#
+  count(8)
+  copy(c4eighth, target, myClass.index)
+  count(8)
+  copy(c4sixteen, target, myClass.index)
+  count(16)
+  copy(b3sixteen, target, myClass.index)
+  count(16)
+  copy(c4eighth, target, myClass.index)#
+  count(8)
+  count(4)
+  copy(g3eighth, target, myClass.index)
+  count(8)
+  copy(b3eighth, target, myClass.index)
+  count(8)
+  copy(a3eighth, target, myClass.index)#
+  count(8)
+  copy(a3eighth, target, myClass.index)
+  count(8)
+  copy(a3sixteen, target, myClass.index)
+  count(16)
+  copy(g3sixteen, target, myClass.index)
+  count(16)
+  copy(a3eighth, target, myClass.index) #
+  count(8)
+  count(4)
+  copy(b3eighth, target, myClass.index)
+  count(8)
+  copy(b3eighth, target, myClass.index)
+  count(8)
+  copy(c4eighth, target, myClass.index)#
+  count(8)
+  copy(c4eighth, target, myClass.index)
+  count(8)
+  copy(c4sixteen, target, myClass.index)
+  count(16)
+  copy(b3sixteen, target, myClass.index)
+  count(16)
+  copy(c4eighth, target, myClass.index)#
+  count(8)
   copy(g3eighth, target, myClass.index)
   count(8)
   copy(b3eighth, target, myClass.index)
@@ -130,19 +188,7 @@ def makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target):
   copy(createChord(e2sixteen, b3sixteen), target, myClass.index)
   count(16)
   copy(createChord(f2eighth, b3eighth), target, myClass.index)
-  count(8)
-  count(4)
-  copy(createChord(g2eighth, b3eighth), target, myClass.index)
-  count(8)
-  copy(createChord(g2eighth, b3eighth), target, myClass.index)
-  count(8)
-  copy(createChord(a2eighth, b3eighth), target, myClass.index)
-  count(8)
-  copy(createChord(a2eighth, b3eighth), target, myClass.index)
-  count(8)
-  copy(createChord(a2sixteen, b3sixteen), target, myClass.index)
-  count(8)
-  
+  count(8)  
   return target
   
 def count(note):
@@ -215,3 +261,21 @@ def getLoudest(src):
     if (getSampleValue(s) > loudest):
       loudest = getSampleValue(s)
   return loudest
+  
+def echo(src, delay, num):
+  delay = getSamplingRate(src) * delay
+  srcLength = getLength(src)
+  delayLength = srcLength + (delay * num)
+  
+  src2 = makeEmptySound(int(delayLength))
+  
+  echoAmplitude = 1.0
+  for echoCount in range(0, num):
+    echoAmplitude = echoAmplitude * .6
+    for pos in range(0, srcLength):
+      pos2 = pos + (delay * echoCount)
+      value = getSampleValueAt(src, pos) * echoAmplitude
+      value2 = getSampleValueAt(src2, int(pos2))
+      setSampleValueAt(src2, int(pos2), int(value+value2))
+      
+  return src2
