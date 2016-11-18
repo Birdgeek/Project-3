@@ -17,7 +17,7 @@ def main():
   #17640 for half
   
   myClass.index = 0
-  target = makeEmptySoundBySeconds(30)
+  song = makeEmptySound(471879)
   a3 = note(220.00)
   g3 = note(195.998)
   b3 = note(246.942)
@@ -27,10 +27,20 @@ def main():
   g2 = note(97.9989)
   a2 = note(110.000)
   
-  target = makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target)
-  target = normalize(target)
-  explore(target)
-  writeSoundTo(target, getMediaPath("song.wav"))
+  song = makeSong(a3, g3, b3, c4, f2, e2, g2, a2, song)
+  song = normalize(song)
+  print "index at end", myClass.index
+  
+  canvas = makeEmptySoundBySeconds(45)
+  copy(song, canvas, 0) #Repeats our beat to be twice the song length
+  #customSong = custom(song)
+  #copy(song, canvas, 471879)
+  reverse(canvas)
+  mirrorSound(canvas)
+
+  
+  explore(canvas)
+  #writeSoundTo(target, getMediaPath("song.wav"))
   
 def makeSong(a3, g3, b3, c4, f2, e2, g2, a2, target):
 
@@ -262,7 +272,7 @@ def getLoudest(src):
       loudest = getSampleValue(s)
   return loudest
   
-def echo(src, delay, num):
+def echo(src, delay, num, start, end):
   delay = getSamplingRate(src) * delay
   srcLength = getLength(src)
   delayLength = srcLength + (delay * num)
@@ -272,10 +282,15 @@ def echo(src, delay, num):
   echoAmplitude = 1.0
   for echoCount in range(0, num):
     echoAmplitude = echoAmplitude * .6
-    for pos in range(0, srcLength):
+    for pos in range(start, end):
       pos2 = pos + (delay * echoCount)
       value = getSampleValueAt(src, pos) * echoAmplitude
       value2 = getSampleValueAt(src2, int(pos2))
       setSampleValueAt(src2, int(pos2), int(value+value2))
       
   return src2
+  
+def custom(src):
+  for s in getSamples(src):
+    setSampleValue(s, getSampleValue(s) * -1)
+  return src
